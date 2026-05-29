@@ -3,7 +3,7 @@ import { Headphones, Mail, Phone } from 'lucide-react'
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <div className="footer-support">
+      {/* <div className="footer-support">
         <div>
           <Headphones size={26} />
           <span>
@@ -25,11 +25,11 @@ export default function Footer() {
             <small>+57 (6) 741 7700</small>
           </span>
         </div>
-      </div>
+      </div> */}
 
       <div className="footer-bottom">
         <span>© 2026 SIG Quindío - Sistema de Información Geográfica del Quindío</span>
-        <span>Política de privacidad · Términos de uso · Contacto</span>
+        {/* <span>Política de privacidad · Términos de uso · Contacto</span> */}
       </div>
     </footer>
   )

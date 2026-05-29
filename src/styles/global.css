@@ -162,9 +162,11 @@ a {
   padding: 72px 5vw;
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(9, 37, 18, 0.9), rgba(14, 75, 32, 0.48), rgba(255, 255, 255, 0.02)),
-    radial-gradient(circle at 80% 72%, rgba(179, 35, 35, 0.62), transparent 13%),
-    linear-gradient(135deg, #0c351c, #4d873a 45%, #c7e2bd);
+    /* linear-gradient(90deg, rgba(7, 36, 18, 0.82) 0%, rgba(13, 64, 30, 0.5) 42%, rgba(255, 255, 255, 0.08) 100%), */
+    url('../assets/images/Fondo-incio-SIG-Quindio (2).jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .home-hero::before {
@@ -172,10 +174,9 @@ a {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.25), transparent 6%),
-    radial-gradient(circle at 42% 31%, rgba(255, 255, 255, 0.18), transparent 8%),
-    linear-gradient(160deg, transparent 0 55%, rgba(255,255,255,0.12) 56% 100%);
-  opacity: 0.8;
+    linear-gradient(180deg, rgba(2, 18, 10, 0.16) 0%, rgba(2, 18, 10, 0.36) 100%),
+    radial-gradient(circle at 78% 24%, rgba(255, 255, 255, 0.22), transparent 28%);
+  opacity: 1;
 }
 
 .hero-bg-decoration.coffee {
@@ -185,13 +186,13 @@ a {
   width: 560px;
   height: 360px;
   border-radius: 50%;
-  background:
+  /* background:
     radial-gradient(circle at 20% 40%, #b5211f 0 4%, transparent 5%),
     radial-gradient(circle at 35% 46%, #d14a2b 0 5%, transparent 6%),
     radial-gradient(circle at 51% 39%, #6c3216 0 5%, transparent 6%),
     radial-gradient(circle at 68% 55%, #9b1e1f 0 5%, transparent 6%),
     radial-gradient(circle at 42% 68%, #2e7d32 0 18%, transparent 19%),
-    radial-gradient(circle at 72% 70%, #3d8d36 0 15%, transparent 16%);
+    radial-gradient(circle at 72% 70%, #3d8d36 0 15%, transparent 16%); */
   opacity: 0.9;
 }
 
@@ -202,10 +203,10 @@ a {
   width: 320px;
   height: 300px;
   border-radius: 50%;
-  background:
+  /* background:
     radial-gradient(ellipse at 30% 52%, #1e6b31 0 18%, transparent 19%),
     radial-gradient(ellipse at 52% 42%, #5fb34c 0 18%, transparent 19%),
-    radial-gradient(ellipse at 74% 60%, #0c4d27 0 18%, transparent 19%);
+    radial-gradient(ellipse at 74% 60%, #0c4d27 0 18%, transparent 19%); */
   opacity: 0.7;
 }
 
@@ -283,6 +284,7 @@ a {
 
 .content-section {
   padding: 52px 5vw;
+  /* background: linear-gradient(100deg, #e21934 1%, #ffffff 30%, rgba(226, 25, 52, 0.08) 40%); */
 }
 
 .section-heading h2 {
@@ -349,10 +351,10 @@ a {
 }
 
 .home-stats {
-  margin: 0 5vw 44px;
+  margin: 30px 5vw 44px;
   padding: 26px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -382,21 +384,31 @@ a {
 .institutional-band {
   margin: 0 5vw 52px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
   align-items: center;
 }
 
 .institution-logo {
-  min-height: 74px;
+  min-height: 120px;
   display: grid;
   place-items: center;
+  padding: 14px 18px;
   border-radius: 18px;
   border: 1px solid var(--line);
   background: white;
   color: #536158;
   font-weight: 900;
   text-align: center;
+}
+
+.institution-logo img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 92%;
+  max-height: 100px;
+  object-fit: contain;
 }
 
 .mapoteca-banner {
@@ -406,19 +418,19 @@ a {
   align-items: center;
   padding: 54px 5vw;
   overflow: hidden;
-  background:
+  /* background:
     radial-gradient(circle at 88% 43%, rgba(163, 38, 38, 0.42), transparent 11%),
     radial-gradient(circle at 79% 70%, rgba(213,161,30,0.5), transparent 12%),
-    linear-gradient(90deg, #eef7eb, #ffffff 55%, #d7ead0);
+    linear-gradient(90deg, #eef7eb, #ffffff 55%, #d7ead0); */
 }
 
 .mapoteca-banner::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
+  /* background:
     radial-gradient(circle at 12% 70%, rgba(35,107,47,0.18), transparent 16%),
-    radial-gradient(circle at 18% 50%, rgba(35,107,47,0.14), transparent 10%);
+    radial-gradient(circle at 18% 50%, rgba(35,107,47,0.14), transparent 10%); */
 }
 
 .mapoteca-banner-content {
@@ -445,12 +457,12 @@ a {
   width: 360px;
   height: 260px;
   border-radius: 50%;
-  background:
+  /* background:
     radial-gradient(circle at 35% 40%, #a42122 0 5%, transparent 6%),
     radial-gradient(circle at 45% 54%, #d2452f 0 5%, transparent 6%),
     radial-gradient(circle at 60% 42%, #5d2c14 0 5%, transparent 6%),
     radial-gradient(ellipse at 55% 65%, #2e7d32 0 22%, transparent 23%),
-    radial-gradient(ellipse at 75% 60%, #5fae47 0 18%, transparent 19%);
+    radial-gradient(ellipse at 75% 60%, #5fae47 0 18%, transparent 19%); */
 }
 
 .mapoteca-content {

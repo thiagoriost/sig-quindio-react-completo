@@ -1,6 +1,9 @@
 import { BarChart3, CloudDownload, FileText, Globe2, MapPinned } from 'lucide-react'
 import HeroActions from '../components/home/HeroActions.jsx'
 import ToolCard from '../components/home/ToolCard.jsx'
+import escudoQuindio from '../assets/images/escudoQuindio.jpg'
+import logoCRQ from '../assets/images/logoCRQ2.jpg'
+import logoIgac from '../assets/images/IGAC_LOGO.png'
 import { ADMIN_URL } from '../utils/urls.js'
 
 export default function Home({ onNavigate }) {
@@ -83,7 +86,7 @@ export default function Home({ onNavigate }) {
           <strong>1.845 km²</strong>
           <span>Extensión territorial</span>
         </div>
-        <div>
+        {/* <div>
           <BarChart3 />
           <strong>604.711</strong>
           <span>Habitantes aprox.</span>
@@ -92,14 +95,19 @@ export default function Home({ onNavigate }) {
           <FileText />
           <strong>+200</strong>
           <span>Capas de información</span>
-        </div>
+        </div> */}
       </section>
 
       <section className="institutional-band">
-        <div className="institution-logo">Gobernación del Quindío</div>
-        <div className="institution-logo">IGAC</div>
-        <div className="institution-logo">Colombia Potencia de la Vida</div>
-        <div className="institution-logo">CRQ</div>
+        <div className="institution-logo">
+          <img src={escudoQuindio} alt="Gobernacion del Quindio" />
+        </div>
+        <div className="institution-logo">
+          <img src={logoIgac} alt="IGAC" />
+        </div>
+        <div className="institution-logo">
+          <img src={logoCRQ} alt="CRQ" />
+        </div>
       </section>
     </main>
   )
