@@ -1,5 +1,7 @@
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import { ADMIN_URL } from '../../utils/urls'
+import logo from '../../assets/images/logo.png'
 
 const navItems = [
   { id: 'home', label: 'Inicio' },
@@ -18,11 +20,7 @@ export default function Header({ currentPage, onNavigate }) {
   return (
     <header className="site-header">
       <button className="logo-button" onClick={() => navigate('home')}>
-        <span className="logo-flower">✦</span>
-        <span className="logo-text">
-          <strong>SIG Quindío</strong>
-          <small>Sistema de Información Geográfica</small>
-        </span>
+        <img className="logo-image" src={logo} alt="SIG Quindio" />
       </button>
 
       <button className="mobile-menu-button" onClick={() => setOpen(!open)}>
@@ -39,8 +37,10 @@ export default function Header({ currentPage, onNavigate }) {
             {item.label}
           </button>
         ))}
-        {/* <a href="#indicadores">Indicadores</a>
-        <a href="#servicios">Servicios</a>
+        <a href={ADMIN_URL} target="_blank" rel="noopener noreferrer">
+          Administrador
+        </a>
+        {/* <a href="#servicios">Servicios</a>
         <a href="#descargas">Descargas</a>
         <a href="#acerca">Acerca de</a>
         <a className="login-button" href="#login">Iniciar sesión</a> */}

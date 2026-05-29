@@ -1,4 +1,5 @@
 import { FolderDot, FileText, MapPinned } from 'lucide-react'
+import { ADMIN_URL } from '../../utils/urls'
 
 export default function HeroActions({ onNavigate }) {
   return (
@@ -19,7 +20,7 @@ export default function HeroActions({ onNavigate }) {
         </span>
       </button>
 
-      <button className="hero-action" onClick={() => document.getElementById('indicadores')?.scrollIntoView()}>
+      <button className="hero-action" onClick={() => window.open(ADMIN_URL, '_blank', 'noopener,noreferrer')}>
         <FolderDot size={24} />
         <span>
           <strong>Administrador</strong>

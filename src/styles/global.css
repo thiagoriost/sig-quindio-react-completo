@@ -53,7 +53,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 28px;
-  padding: 12px 5vw;
+  padding: 12px 2vw;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
@@ -64,9 +64,15 @@ a {
   background: transparent;
   display: flex;
   align-items: center;
-  gap: 12px;
   color: var(--text);
   text-align: left;
+  padding: 0;
+}
+
+.logo-image {
+  height: 62px;
+  width: auto;
+  display: block;
 }
 
 .logo-flower {
@@ -290,7 +296,7 @@ a {
 
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 26px;
   margin-top: 26px;
 }
@@ -951,6 +957,10 @@ a {
 
   .logo-text small {
     display: none;
+  }
+
+  .logo-image {
+    height: 52px;
   }
 
   .home-hero {

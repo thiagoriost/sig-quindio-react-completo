@@ -1,6 +1,7 @@
 import { BarChart3, CloudDownload, FileText, Globe2, MapPinned } from 'lucide-react'
 import HeroActions from '../components/home/HeroActions.jsx'
 import ToolCard from '../components/home/ToolCard.jsx'
+import { ADMIN_URL } from '../utils/urls.js'
 
 export default function Home({ onNavigate }) {
   return (
@@ -10,7 +11,7 @@ export default function Home({ onNavigate }) {
         <div className="hero-bg-decoration leaves"></div>
 
         <div className="home-hero-content">
-          <p className="section-kicker">Geoportal departamental</p>
+          {/* <p className="section-kicker">Geoportal departamental</p> */}
           <h1>Sistema de Información Geográfica del Quindío</h1>
           <p>
             Información territorial para la planificación, gestión y desarrollo
@@ -53,18 +54,21 @@ export default function Home({ onNavigate }) {
           />
           <ToolCard
             icon={<BarChart3 />}
-            title="Indicadores"
-            text="Visualiza estadísticas e indicadores territoriales."
-            action="Ver indicadores"
-            onClick={() => document.getElementById('indicadores')?.scrollIntoView()}
+            title="Administrador"
+            text="Visualiza administrador de servicios."
+            action="Ver administrador"
+            onClick={() => {
+              console.log({ADMIN_URL})
+              window.open(ADMIN_URL, '_blank', 'noopener,noreferrer')
+            }}
           />
-          <ToolCard
+          {/* <ToolCard
             icon={<CloudDownload />}
             title="Descargas"
             text="Descarga información geográfica y documentos."
             action="Ir a descargas"
             onClick={() => document.getElementById('descargas')?.scrollIntoView()}
-          />
+          /> */}
         </div>
       </section>
 
