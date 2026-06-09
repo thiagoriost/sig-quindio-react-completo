@@ -1,5 +1,4 @@
-export const MAPOTECA_BASE_URL =
-  'https://sigquindio.gov.co/ArchivosQuindioIII/SIG_QUINDIO/MAPOTECA/'
+export const MAPOTECA_BASE_URL = '/ArchivosQuindioIII/SIG_QUINDIO/MAPOTECA/'
 
 export const categories = [
   {
