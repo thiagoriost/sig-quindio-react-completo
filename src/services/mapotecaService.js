@@ -1,6 +1,8 @@
 import { categories, getCategoryUrl } from '../data/categories.js'
 import { fallbackPdfs } from '../data/fallbackPdfs.js'
 
+const MAPOTECA_PUBLIC_ORIGIN = 'https://sigquindio.gov.co'
+
 function safeDecode(value) {
   try {
     return decodeURIComponent(value)
@@ -42,8 +44,26 @@ function inferMunicipio() {
   return 'Departamento del Quindío'
 }
 
+function buildPublicFolderUrl(folderPath) {
+  return new URL(folderPath, MAPOTECA_PUBLIC_ORIGIN).href
+}
+
+function buildPdfUrl(fileName, publicFolderUrl) {
+  if (/^https?:\/\//i.test(fileName)) {
+    return fileName
+  }
+
+  if (/^\/?ArchivosQuindioIII\//i.test(fileName)) {
+    const absolutePath = fileName.startsWith('/') ? fileName : `/${fileName}`
+    return new URL(absolutePath, MAPOTECA_PUBLIC_ORIGIN).href
+  }
+
+  return new URL(fileName, publicFolderUrl).href
+}
+
 export async function loadPdfsFromDirectory(category) {
   const folderUrl = getCategoryUrl(category)
+  const publicFolderUrl = buildPublicFolderUrl(folderUrl)
 
   const response = await fetch(folderUrl, {
     method: 'GET',
@@ -77,7 +97,7 @@ export async function loadPdfsFromDirectory(category) {
       escala: inferScale(decodedFile),
       year: inferYearFromFileName(decodedFile),
       format: 'PDF',
-      url: new URL(fileName, folderUrl).href,
+      url: buildPdfUrl(fileName, publicFolderUrl),
     }
   })
 }
@@ -116,6 +136,6 @@ export async function loadMapotecaPdfs() {
   return {
     pdfs,
     errors,
-    usingFallback: errors.length > 0,
+    usingFallback: false,
   }
 }

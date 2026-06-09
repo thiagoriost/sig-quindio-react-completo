@@ -23,10 +23,10 @@ export default function PdfCard({ pdf, onPreview }) {
             <Eye size={16} />
             Ver detalles
           </button>
-          <a href={pdf.url} target="_blank" rel="noreferrer">
+          {/* <a href={pdf.url} target="_blank" rel="noreferrer">
             <Download size={16} />
             Abrir PDF
-          </a>
+          </a> */}
         </div>
       </div>
     </article>
